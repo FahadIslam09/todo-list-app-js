@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF; /* Primary text color */
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #2C5364 0%, #203A43 50%, #0F2027 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  width: 400px; /* Fixed width */
+  max-width: 90%; /* Ensures responsiveness on smaller screens */
+  border: 1px solid #3B6978;
+  padding: 25px 20px;
+  background-color: #3B6978;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #DAE1E7; /* Heading color */
+}
+
+.input-box {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-input-box,
+.date-input-box {
+  padding: 15px 10px;
+  border-radius: 20px;
+  border: 2px solid #DAE1E7;
+  outline: none;
+  background-color: #DAE1E7;
+  color: #0F2027; /* Input text color */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.task-input-box:focus,
+.date-input-box:focus {
+  border-color: #204051;
+  box-shadow: 0 0 5px rgba(32, 64, 81, 0.5);
+}
+
+.task-input-box:hover,
+.date-input-box:hover {
+  border-color: #3B6978;
+  box-shadow: 0 0 8px rgba(32, 64, 81, 0.3);
+}
+
+.task-input-box {
+  width: calc(100% - 150px);
+  margin-right: 10px;
+}
+
+.date-input-box {
+  width: 130px;
+}
+
+.add-button {
+  margin-bottom: 20px;
+}
+
+.add-button button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #204051;
+  color: #FFFFFF; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.add-button button:hover {
+  background-color: #345B63;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-list {
+  list-style-type: none;
+  max-height: 300px; /* Maximum height for scroll */
+  overflow-y: auto; /* Enables vertical scrollbar */
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #3B6978;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-item .task {
+  width: 60%;
+  color: #DAE1E7; /* Task text color */
+}
+
+.task-item .date {
+  width: 30%;
+  margin-right: 8px;
+  text-align: center;
+  color: #DAE1E7; /* Date text color */
+}
+
+.task-item button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #204051;
+  color: #FFFFFF; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.task-item button:hover {
+  background-color: #345B63;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #204051;
+  border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background-color: #345B63;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #3B6978;
+  border-radius: 10px;
+}
+
+.warning-text {
+  color: #ff2600; /* Warning text color */
+  font-size: 14px;
+  text-align: center;
+  /* display: none; */
+  margin-top: 10px;
+}
